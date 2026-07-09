@@ -1,0 +1,148 @@
+2025-03-28 14:24:55,988 transreid INFO: Namespace(config_file='configs/uav-veid/vit_base.yml', opts=['TEST.WEIGHT', '/home/uit2023/LuuTru/Vutm/CLIP-ReID/logs/UAV-VeID-Fog/ViT_Baseline/ViT-B-16_60.pth'])
+2025-03-28 14:24:55,988 transreid INFO: Loaded configuration file configs/uav-veid/vit_base.yml
+2025-03-28 14:24:55,988 transreid INFO: 
+MODEL:
+  PRETRAIN_CHOICE: 'imagenet'
+  METRIC_LOSS_TYPE: 'triplet'
+  IF_LABELSMOOTH: 'on'
+  IF_WITH_CENTER: 'no'
+  NAME: 'ViT-B-16'
+  STRIDE_SIZE: [16, 16]
+  ID_LOSS_WEIGHT : 1.0
+  TRIPLET_LOSS_WEIGHT : 1.0
+  I2T_LOSS_WEIGHT : 1.0
+  # SIE_CAMERA: True
+  # SIE_VIEW: True
+  # SIE_COE : 1.0
+  
+INPUT:
+  SIZE_TRAIN: [256, 256]
+  SIZE_TEST: [256, 256]
+  PROB: 0.5 # random horizontal flip
+  RE_PROB: 0.5 # random erasing
+  PADDING: 10
+  PIXEL_MEAN: [0.5, 0.5, 0.5]
+  PIXEL_STD: [0.5, 0.5, 0.5]
+
+DATALOADER:
+  SAMPLER: 'softmax_triplet'
+  NUM_INSTANCE: 4
+  NUM_WORKERS: 8
+
+SOLVER:
+  IMS_PER_BATCH: 64
+  OPTIMIZER_NAME: "Adam"
+  BASE_LR: 0.000005
+  WARMUP_METHOD: 'linear'
+  WARMUP_ITERS: 10
+  WARMUP_FACTOR: 0.1
+  WEIGHT_DECAY:  0.0001
+  WEIGHT_DECAY_BIAS: 0.0001
+  LARGE_FC_LR: False
+  MAX_EPOCHS: 60
+  CHECKPOINT_PERIOD: 60
+  LOG_PERIOD: 50
+  EVAL_PERIOD: 60
+  BIAS_LR_FACTOR: 2
+  
+  STEPS: [30, 50]
+  GAMMA: 0.1
+  
+TEST:
+  EVAL: True
+  IMS_PER_BATCH: 64
+  RE_RANKING: False
+  WEIGHT: ''
+  NECK_FEAT: 'before'
+  FEAT_NORM: 'yes'
+
+DATASETS:
+   NAMES: ('uav_veid_fog')
+   ROOT_DIR: ('/home/uit2023/LuuTru/Vutm/dataset/')
+OUTPUT_DIR: '/home/uit2023/LuuTru/Vutm/CLIP-ReID/logs/UAV-VeID-Fog/ViT_Baseline'
+
+# CUDA_VISIBLE_DEVICES=1 python train.py --config_file configs/vru/vit_base.yml
+2025-03-28 14:24:55,989 transreid INFO: Running with config:
+DATALOADER:
+  NUM_INSTANCE: 4
+  NUM_WORKERS: 8
+  SAMPLER: softmax_triplet
+DATASETS:
+  NAMES: uav_veid_fog
+  ROOT_DIR: /home/uit2023/LuuTru/Vutm/dataset/
+INPUT:
+  PADDING: 10
+  PIXEL_MEAN: [0.5, 0.5, 0.5]
+  PIXEL_STD: [0.5, 0.5, 0.5]
+  PROB: 0.5
+  RE_PROB: 0.5
+  SIZE_TEST: [256, 256]
+  SIZE_TRAIN: [256, 256]
+MODEL:
+  ATT_DROP_RATE: 0.0
+  COS_LAYER: False
+  DEVICE: cuda
+  DEVICE_ID: 0
+  DIST_TRAIN: False
+  DROP_OUT: 0.0
+  DROP_PATH: 0.1
+  I2T_LOSS_WEIGHT: 1.0
+  ID_LOSS_TYPE: softmax
+  ID_LOSS_WEIGHT: 1.0
+  IF_LABELSMOOTH: on
+  IF_WITH_CENTER: no
+  LAST_STRIDE: 1
+  METRIC_LOSS_TYPE: triplet
+  NAME: ViT-B-16
+  NECK: bnneck
+  NO_MARGIN: False
+  PRETRAIN_CHOICE: imagenet
+  PRETRAIN_PATH: 
+  SIE_CAMERA: False
+  SIE_COE: 3.0
+  SIE_VIEW: False
+  STRIDE_SIZE: [16, 16]
+  TRANSFORMER_TYPE: None
+  TRIPLET_LOSS_WEIGHT: 1.0
+OUTPUT_DIR: /home/uit2023/LuuTru/Vutm/CLIP-ReID/logs/UAV-VeID-Fog/ViT_Baseline
+SOLVER:
+  BASE_LR: 5e-06
+  BIAS_LR_FACTOR: 2
+  CENTER_LOSS_WEIGHT: 0.0005
+  CENTER_LR: 0.5
+  CHECKPOINT_PERIOD: 60
+  COSINE_MARGIN: 0.5
+  COSINE_SCALE: 30
+  EVAL_PERIOD: 60
+  GAMMA: 0.1
+  IMS_PER_BATCH: 64
+  LARGE_FC_LR: False
+  LOG_PERIOD: 50
+  LR_MIN: 1.6e-05
+  MARGIN: 0.3
+  MAX_EPOCHS: 60
+  MOMENTUM: 0.9
+  OPTIMIZER_NAME: Adam
+  SEED: 1234
+  STEPS: (30, 50)
+  WARMUP_EPOCHS: 5
+  WARMUP_FACTOR: 0.1
+  WARMUP_ITERS: 10
+  WARMUP_LR_INIT: 0.01
+  WARMUP_METHOD: linear
+  WEIGHT_DECAY: 0.0001
+  WEIGHT_DECAY_BIAS: 0.0001
+TEST:
+  DIST_MAT: dist_mat.npy
+  EVAL: True
+  FEAT_NORM: yes
+  IMS_PER_BATCH: 64
+  NECK_FEAT: before
+  RE_RANKING: False
+  WEIGHT: /home/uit2023/LuuTru/Vutm/CLIP-ReID/logs/UAV-VeID-Fog/ViT_Baseline/ViT-B-16_60.pth
+2025-03-28 14:25:00,547 transreid.test INFO: Enter inferencing
+2025-03-28 14:25:25,029 transreid.test INFO: Validation Results 
+2025-03-28 14:25:25,030 transreid.test INFO: mAP: 82.6%
+2025-03-28 14:25:25,030 transreid.test INFO: CMC curve, Rank-1  :74.0%
+2025-03-28 14:25:25,030 transreid.test INFO: CMC curve, Rank-5  :93.8%
+2025-03-28 14:25:25,030 transreid.test INFO: CMC curve, Rank-10 :97.4%

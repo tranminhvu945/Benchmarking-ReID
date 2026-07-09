@@ -1,0 +1,12 @@
+[04/04 22:20:50] fastreid.evaluation.evaluator INFO: Start inference on 91595 images
+[04/04 22:20:58] fastreid.evaluation.evaluator INFO: Inference done 11/358. 0.2395 s / batch. ETA=0:01:30
+[04/04 22:21:28] fastreid.evaluation.evaluator INFO: Inference done 128/358. 0.2372 s / batch. ETA=0:00:59
+[04/04 22:21:58] fastreid.evaluation.evaluator INFO: Inference done 243/358. 0.2380 s / batch. ETA=0:00:29
+[04/04 22:22:29] fastreid.evaluation.evaluator INFO: Inference done 358/358. 0.2388 s / batch. ETA=0:00:00
+[04/04 22:22:29] fastreid.evaluation.evaluator INFO: Total inference time: 0:01:32.012021 (0.260657 s / batch per device, on 2 devices)
+[04/04 22:22:29] fastreid.evaluation.evaluator INFO: Total inference pure compute time: 0:01:24 (0.238826 s / batch per device, on 2 devices)
+[04/04 22:35:18] fastreid.engine.defaults INFO: Evaluation results for VRU_Fog in csv format:
+[04/04 22:35:18] fastreid.evaluation.testing INFO: Evaluation results in csv format: 
+[36m| Dataset   | Rank-1   | Rank-5   | Rank-10   | mAP   | mINP   | metric   |
+|:----------|:---------|:---------|:----------|:------|:-------|:---------|
+| VRU_Fog   | 89.15    | 97.94    | 98.95     | 93.06 | 93.06  | 91.11    |[0m

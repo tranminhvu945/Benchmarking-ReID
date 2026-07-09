@@ -1,0 +1,5 @@
+[04/04 09:32:33] fastreid.engine.defaults INFO: Evaluation results for UAV_VeID_Rain in csv format:
+[04/04 09:32:33] fastreid.evaluation.testing INFO: Evaluation results in csv format: 
+[36m| Dataset       | Rank-1   | Rank-5   | Rank-10   | mAP   | mINP   | metric   |
+|:--------------|:---------|:---------|:----------|:------|:-------|:---------|
+| UAV_VeID_Rain | 88.15    | 94.79    | 96.43     | 91.24 | 91.24  | 89.70    |[0m

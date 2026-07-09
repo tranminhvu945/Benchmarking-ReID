@@ -1,0 +1,55 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environments
+.env
+.venv/
+venv/
+env/
+conda/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and experiment outputs
+wandb/
+runs/
+tensorboard/
+outputs/
+output/
+logs/
+*.log
+
+# Large model files / checkpoints
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.npy
+*.npz
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Dataset images and generated weather data
+# Keep split/label txt files if needed, but avoid committing raw image folders.
+data/**/bounding_box_train/
+data/**/bounding_box_test/
+data/**/query/
+data/**/gallery/
+data/**/train/
+data/**/test/
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.bmp

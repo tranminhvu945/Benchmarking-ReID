@@ -1,0 +1,11 @@
+[04/04 15:59:11] fastreid.evaluation.evaluator INFO: Start inference on 91595 images
+[04/04 15:59:18] fastreid.evaluation.evaluator INFO: Inference done 11/358. 0.2361 s / batch. ETA=0:01:28
+[04/04 15:59:48] fastreid.evaluation.evaluator INFO: Inference done 128/358. 0.2374 s / batch. ETA=0:00:59
+[04/04 16:00:18] fastreid.evaluation.evaluator INFO: Inference done 244/358. 0.2386 s / batch. ETA=0:00:29
+[04/04 16:00:48] fastreid.evaluation.evaluator INFO: Total inference time: 0:01:31.107310 (0.258094 s / batch per device, on 2 devices)
+[04/04 16:00:48] fastreid.evaluation.evaluator INFO: Total inference pure compute time: 0:01:24 (0.238994 s / batch per device, on 2 devices)
+[04/04 16:13:35] fastreid.engine.defaults INFO: Evaluation results for VRU_Rain in csv format:
+[04/04 16:13:35] fastreid.evaluation.testing INFO: Evaluation results in csv format: 
+[36m| Dataset   | Rank-1   | Rank-5   | Rank-10   | mAP   | mINP   | metric   |
+|:----------|:---------|:---------|:----------|:------|:-------|:---------|
+| VRU_Rain  | 83.69    | 94.27    | 96.27     | 88.49 | 88.49  | 86.09    |[0m

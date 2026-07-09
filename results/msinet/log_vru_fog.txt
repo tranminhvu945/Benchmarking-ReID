@@ -1,0 +1,23 @@
+Dataset statistics:
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |  7085 |    80532 |         1
+  query    |  8000 |    83595 |         1
+  gallery  |  8000 |     8000 |         1
+  ----------------------------------------
+Evaluating: [0/716]
+Evaluating: [100/716]
+Evaluating: [200/716]
+Evaluating: [300/716]
+Evaluating: [400/716]
+Evaluating: [500/716]
+Evaluating: [600/716]
+Evaluating: [700/716]
+The test feature is normalized
+=> Computing DistMat with euclidean distance
+Validation Results
+mAP: 89.9%
+CMC curve, Rank-1  :84.5%
+CMC curve, Rank-5  :96.5%
+CMC curve, Rank-10 :98.3%

@@ -1,0 +1,5 @@
+[04/04 11:08:44] fastreid.engine.defaults INFO: Evaluation results for UAV_VeID_Fog in csv format:
+[04/04 11:08:44] fastreid.evaluation.testing INFO: Evaluation results in csv format: 
+[36m| Dataset      | Rank-1   | Rank-5   | Rank-10   | mAP   | mINP   | metric   |
+|:-------------|:---------|:---------|:----------|:------|:-------|:---------|
+| UAV_VeID_Fog | 94.60    | 99.02    | 99.18     | 96.62 | 96.62  | 95.61    |[0m
