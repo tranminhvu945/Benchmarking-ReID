@@ -1,4 +1,10 @@
-# Benchmarking UAV-based Vehicle Re-Identification under Simulated Weather Conditions
+# [MAPR 2026] Benchmarking UAV-based Vehicle Re-Identification under Simulated Weather Conditions
+
+<p align="center">
+  Vu Minh Tran and Khang Nguyen*<br>
+  University of Information Technology<br>
+  Vietnam National University Ho Chi Minh City
+</p>
 
 ## Overview
 
@@ -12,10 +18,10 @@ This repository benchmarks UAV-based vehicle re-identification under simulated a
 - The original method code is kept under `methods/` with minimal changes for running our benchmark protocol.
 
 ## Data
-Please download the prepared datasets from the following [Google Drive link](https://drive.google.com/drive/folders/1rrK20QWPKBwt7XNklJFsekFHZMFYBfQI?usp=drive_link) and place them under the `data/` directory.
+Please download the prepared datasets from the following [Data link](https://drive.google.com/drive/folders/1rrK20QWPKBwt7XNklJFsekFHZMFYBfQI?usp=drive_link) and place them under the `data/` directory.
 
 ## Checkpoints
-Please download the trained checkpoints from the following [Google Drive link](https://drive.google.com/drive/folders/1U9K7jMQRmBGSWC76Cd0YUsEWcSKR_Dop?usp=drive_link) and place them under the `checkpoints/` directory.
+Please download the trained checkpoints from the following [Checkpoints link](https://drive.google.com/drive/folders/1U9K7jMQRmBGSWC76Cd0YUsEWcSKR_Dop?usp=drive_link) and place them under the `checkpoints/` directory.
 
 ## Weather Generation
 
