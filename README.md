@@ -1,11 +1,5 @@
 # [MAPR 2026] Benchmarking UAV-based Vehicle Re-Identification under Simulated Weather Conditions
 
-<p align="center">
-  Vu Minh Tran and Khang Nguyen*<br>
-  University of Information Technology<br>
-  Vietnam National University Ho Chi Minh City
-</p>
-
 ## Overview
 
 This repository benchmarks UAV-based vehicle re-identification under simulated adverse weather conditions. We evaluate three representative ReID methods on VRU and UAV-VeID under clean, foggy, and rainy settings.
